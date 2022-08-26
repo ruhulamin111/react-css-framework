@@ -1,11 +1,8 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-
 import { Card } from 'react-bootstrap';
 
 const ReactBootstrapCard = ({ product }) => {
     const { name, price } = product;
-
 
     return (
         <div>
@@ -24,7 +21,6 @@ const ReactBootstrapCard = ({ product }) => {
                 <Card.Footer>
                     <small className="text-muted" >Last updated 3 mins ago</small>
                 </Card.Footer>
-                <Button variant="primary">Primary</Button>
             </Card>
 
         </div>
