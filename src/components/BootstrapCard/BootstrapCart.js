@@ -1,25 +1,22 @@
 import React from 'react';
-import Item from '../Item/Item';
 
-const BootstrapCart = () => {
-    const shop = [
-        { id: 1, name: 'ice cream', price: 150 },
-        { id: 2, name: 'chocolet', price: 100 },
-        { id: 3, name: 'chips', price: 50 },
-        { id: 4, name: 'buiscuit', price: 120 },
-        { id: 5, name: 'cool drinks', price: 80 },
-        { id: 6, name: 'pure water', price: 60 }
-    ]
+const BootstrapCart = ({ product }) => {
+    const { name, price } = product;
 
     return (
         <div>
-            <div class="card-group">
-                {
-                    shop.map((product, index) => <Item
-                        key={index}
-                        product={product}
-                    ></Item>)}
+            <div className="card">
+                <img src="..." className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">{name}</h5>
+                    <p className="card-text">{price}</p>
+                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                <div className="card-footer">
+                    <small className="text-muted">Last updated 3 mins ago</small>
+                </div>
             </div>
+
         </div>
     );
 };
