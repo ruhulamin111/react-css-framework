@@ -1,5 +1,8 @@
 import React from 'react';
-import BootstrapCart from '../BootstrapCard/BootstrapCart';
+// import BootstrapCart from '../BootstrapCard/BootstrapCart';
+import ReactBootstrapCard from '../ReactBootstrapCard/ReactBootstrapCard';
+import CardGroup from 'react-bootstrap/CardGroup';
+
 
 const Shop = () => {
     const shop = [
@@ -13,15 +16,22 @@ const Shop = () => {
 
     return (
         <div>
-            <div className="card-groud">
+            {/* <div className="card-groud">
                 {
                     shop.map((product, index) => <BootstrapCart
                         key={index}
                         product={product}
                     ></BootstrapCart>)
                 }
-            </div>
-
+            </div> */}
+            <CardGroup>
+                {
+                    shop.map((product, index) => <ReactBootstrapCard
+                        key={index}
+                        product={product}
+                    ></ReactBootstrapCard>)
+                }
+            </CardGroup>
 
         </div>
     );
